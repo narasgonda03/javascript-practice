@@ -1,0 +1,2 @@
+let fruits = ['Mango','Apple','Banana']//array used to store similar type of datatype in single variable
+console.log(fruits[2])//access the third element from the array because array start with 0th location.
