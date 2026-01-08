@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Practice</title>
+    <style>
+        .done {
+            color: green;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">DOM Concept Demo</h1>
+
+    <p id="info">This text will change</p>
+
+    <input type="text" id="inputBox" placeholder="Type something">
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="addItem()">Add Item</button>
+
+    <ul id="list"></ul>
+
+    <script>
+        //  Access element by id
+        let title = document.getElementById("title");
+
+        // Change content
+        title.innerText = "Learning DOM with JavaScript";
+
+        // Function to change paragraph text
+        function changeText() {
+            let input = document.getElementById("inputBox").value;
+            document.getElementById("info").innerText = input;
+        }
+
+        // Create + add new element
+        function addItem() {
+            let li = document.createElement("li");
+            li.innerText = "New Item";
+
+            //  Event on dynamically created element
+            li.onclick = function () {
+                li.classList.toggle("done");
+            };
+
+            document.getElementById("list").appendChild(li);
+        }
+    </script>
+
+</body>
+</html>
