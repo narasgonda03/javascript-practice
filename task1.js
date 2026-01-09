@@ -9,5 +9,6 @@ b = 40//don't redeclarate variable b but reassigning variable b in let
 console.log(b)
 
 const c = 50
-c=60//don't redeclarate variable c and don't reassigning variable c in const
+//const c = 80
+c=60 //don't redeclarate variable c and don't reassigning variable c in const
 console.log(c)

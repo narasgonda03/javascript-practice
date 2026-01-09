@@ -11,7 +11,7 @@ function greet(name = "Aakash"){ //default parameter in function
     console.log(`Hello, ${name}!`);  //strictly use "`" in between parenthesis.
 }
 greet();
-greet(name="Narasgonda");
+greet("Rohit");
 
 //rest parameter --> multiple argument passed as array
 function sum(...numbers) {

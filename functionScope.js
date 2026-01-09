@@ -7,13 +7,16 @@ msg();
 //console.log(message) --> cann't access inside function variable from outside the function
 
 //--- Closures(Functions inside functions) ---
-function outer() {
-let count = 0;
-return function inner() {
-count++;
-console.log(count);
-};
+let count
+function outer(){
+     count = 0;
+    return function inner(){
+        count++;
+        console.log(count);
+    }
 }
-const increment = outer();
-increment(); // Output: 1
-increment(); // Output: 2 
+let increment = outer();
+increment();
+increment();
+increment();
+console.log(count)
